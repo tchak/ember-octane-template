@@ -9,17 +9,17 @@ module.exports = {
     },
     'javascript [brotli]': {
       pattern: ['assets/vendor-*.js', 'assets/ember-octane-template-*.js'],
-      limit: '150KB',
+      limit: '170KB',
       compression: 'brotli',
     },
     css: {
       pattern: 'assets/*.css',
-      limit: '10KB',
+      limit: '15KB',
       compression: 'gzip',
     },
     'css [brotli]': {
       pattern: 'assets/*.css',
-      limit: '7KB',
+      limit: '10KB',
       compression: 'brotli',
     },
   },
