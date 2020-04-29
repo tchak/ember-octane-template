@@ -17,14 +17,13 @@
     "start": "SW_DISABLED=true ember serve",
     "start:sw": "ember serve",
     "test": "SW_DISABLED=true ember test",
-    "bundlesize": "ember bundlesize:test",
+    "bundlesize": "NODE_ENV=production ember bundlesize:test",
     "build": "ember build",
-    "build:prod": "yarn lint:hbs && yarn lint:js && ember build --prod && ember bundlesize:test --build-app=false"
+    "build:prod": "NODE_ENV=production yarn lint:hbs && yarn lint:js && ember build --prod && ember bundlesize:test --build-app=false"
   },
   "devDependencies": {
     "@ember/optional-features": "^1.1.0",
     "@ember/render-modifiers": "^1.0.2",
-    "@fullhuman/postcss-purgecss": "^2.1.2",
     "@glimmer/component": "^1.0.0",
     "@glimmer/tracking": "^1.0.0",
     "@types/ember": "^3.1.2",
