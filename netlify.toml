@@ -3,6 +3,7 @@
   command = "yarn build:prod"
 
 [context.production.environment]
+  NODE_ENV = "production"
   YARN_VERSION = "1.22.4"
   NODE_VERSION = "12"
   API_HOST = ""
