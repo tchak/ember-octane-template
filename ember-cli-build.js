@@ -11,6 +11,7 @@ const purgeCSS = {
       './app/templates/**/*.hbs',
       './app/components/**/*.hbs',
       './app/components/**/*.js',
+      './app/components/**/*.ts',
     ],
     defaultExtractor: (content) => content.match(/[\w-/.:]+(?<!:)/g) || [],
   },
