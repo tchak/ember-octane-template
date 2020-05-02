@@ -1,19 +1,7 @@
 module.exports = {
   root: true,
-  parser: 'babel-eslint',
-  parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: 'module',
-    ecmaFeatures: {
-      legacyDecorators: true,
-    },
-  },
+  parser: '@typescript-eslint/parser',
   plugins: ['ember'],
-  extends: [
-    'eslint:recommended',
-    'plugin:ember/octane',
-    'plugin:prettier/recommended',
-  ],
   env: {
     browser: true,
   },
@@ -21,6 +9,20 @@ module.exports = {
     'ember/no-jquery': 'error',
   },
   overrides: [
+    {
+      files: ['**/*.js'],
+      extends: ['eslint:recommended', 'plugin:ember/octane', 'prettier'],
+    },
+    {
+      files: ['**/*.ts'],
+      plugins: ['@typescript-eslint'],
+      extends: [
+        'plugin:@typescript-eslint/recommended',
+        'plugin:ember/octane',
+        'prettier',
+        'prettier/@typescript-eslint',
+      ],
+    },
     // node files
     {
       files: [
