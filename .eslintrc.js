@@ -11,7 +11,11 @@ module.exports = {
   overrides: [
     {
       files: ['**/*.js'],
-      extends: ['eslint:recommended', 'plugin:ember/octane', 'prettier'],
+      extends: [
+        'eslint:recommended',
+        'plugin:ember/octane',
+        'plugin:prettier/recommended',
+      ],
     },
     {
       files: ['**/*.ts'],
@@ -19,7 +23,7 @@ module.exports = {
       extends: [
         'plugin:@typescript-eslint/recommended',
         'plugin:ember/octane',
-        'prettier',
+        'plugin:prettier/recommended',
         'prettier/@typescript-eslint',
       ],
     },
