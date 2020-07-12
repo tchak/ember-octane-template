@@ -18,11 +18,13 @@
 
   [headers.values]
     Cache-Control = "public, max-age=365000000, immutable"
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
 
 [[headers]]
   for = "/*"
 
   [headers.values]
+    Cache-Control = "no-store, no-cache"
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     X-XSS-Protection = "1; mode=block"
